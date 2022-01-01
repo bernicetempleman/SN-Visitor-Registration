@@ -86,9 +86,8 @@ To-do list:
 
 ![image](https://user-images.githubusercontent.com/12488769/147842941-8a5923f8-04f8-4e10-9bb2-23796dcb66fa.png)
 
+### Updated Branding
 ![image](https://user-images.githubusercontent.com/12488769/147843199-6db5c1fb-dd5a-432f-97e9-3c765e4f21c9.png)
-
-
 
 ## Contributors
 Here list the people who have contributed to this project. 
