@@ -17,9 +17,9 @@ Available in:
 List of features ready and TODOs for future development
 
 To-do list:
+- add client scripts for service catalog record producer and service portal
 
 ## Getting Started
-
 
 ## Usage
 
@@ -66,6 +66,27 @@ To-do list:
 ### Successful Close
 ![image](https://user-images.githubusercontent.com/12488769/147842746-963ea632-d089-4f0f-a5c9-0569c55ec59f.png)
 
+### Create Incident from Visitor record
+![image](https://user-images.githubusercontent.com/12488769/147842797-384a4986-2c0c-422e-aebf-7c38fea6e4a2.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842810-d460b532-3718-4c7f-8c60-ffdfb77c5a83.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842826-f75f7ae0-6285-4929-b552-13961358a572.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842845-92471595-efaa-47cd-a631-f85230f76351.png)
+
+### Security has permission to ban a visitor from future visits
+![image](https://user-images.githubusercontent.com/12488769/147842869-e8d7445f-adae-4f9c-9fee-605f5df76be6.png)
+
+### Record Producer
+![image](https://user-images.githubusercontent.com/12488769/147842887-d98638fe-f4d0-4df4-ba3a-edd7a1069f21.png)
+
+### Service Portal
+![image](https://user-images.githubusercontent.com/12488769/147842908-ff7c82b3-ed01-4ccc-a3a7-6c9c716daa47.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842941-8a5923f8-04f8-4e10-9bb2-23796dcb66fa.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842926-bc33ec13-eabb-405d-8a6e-ff94fa1ca0fc.png)
 
 
 ## Contributors
