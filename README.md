@@ -89,6 +89,9 @@ To-do list:
 ### Updated Branding
 ![image](https://user-images.githubusercontent.com/12488769/147843199-6db5c1fb-dd5a-432f-97e9-3c765e4f21c9.png)
 
+### Employee Center
+![image](https://user-images.githubusercontent.com/12488769/147843829-63c49bfe-a1d1-417c-bd48-3587e9198e74.png)
+
 ## Contributors
 Here list the people who have contributed to this project. 
 - Bernice Templeman
