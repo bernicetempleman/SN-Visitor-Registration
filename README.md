@@ -41,12 +41,37 @@ To-do list:
 
 ![image](https://user-images.githubusercontent.com/12488769/147842434-97923a75-e663-425d-b68a-7d47d63b080f.png)
 
+### New Visitor Registration by RA
+![image](https://user-images.githubusercontent.com/12488769/147842498-76699680-555b-474b-828a-6013dca86026.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842509-44c0652d-6f81-45fc-bf01-65416f5ec3d5.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842531-d37d8c89-5327-462e-8824-3a98a95864bb.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842544-4d9e9f57-fa97-4ee6-a29d-a524e3e4affc.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842553-ffa199e1-b503-4610-9ed4-21e109786013.png)
+
+![image](https://user-images.githubusercontent.com/12488769/147842561-82500ce8-4243-421c-8e2f-dceecd7da9ca.png)
+
+### Aborted due to previous security ban found
+![image](https://user-images.githubusercontent.com/12488769/147842642-3c08b303-1a67-424c-98ef-dbb2fa4d6d32.png)
+
+### Successful Visitor Added
+![image](https://user-images.githubusercontent.com/12488769/147842699-f212415e-4306-4947-86e4-66d1b903d978.png)
+
+### Visit end time needs updated before close
+![image](https://user-images.githubusercontent.com/12488769/147842728-5866a790-f22e-44f7-add2-e9194daf8b14.png)
+
+### Successful Close
+![image](https://user-images.githubusercontent.com/12488769/147842746-963ea632-d089-4f0f-a5c9-0569c55ec59f.png)
+
+
+
 ## Contributors
 Here list the people who have contributed to this project. 
 - Bernice Templeman
-![Uploading image.png…]()
 
-![Uploading image.png…]()
 ## Roles and Responsibilities
 - Worked on ServiceNow developer to design a catalog form, workflow, and scripts.
 - Created custome visitor table extended from task
