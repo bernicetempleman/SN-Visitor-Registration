@@ -23,6 +23,17 @@ To-do list:
 
 ## Usage
 
+### Resident Advisor account example
+![image](https://user-images.githubusercontent.com/12488769/147842304-593576ab-7964-440b-97bd-bd2af51e24e7.png)
+
+### Security account example
+![image](https://user-images.githubusercontent.com/12488769/147842319-7961b27b-64d0-4abb-8810-22d035db8b5a.png)
+
+### No role account example
+![image](https://user-images.githubusercontent.com/12488769/147842331-e8fb7262-8258-40f3-ab51-20788b89a370.png)
+
+### Admin view of Table
+![image](https://user-images.githubusercontent.com/12488769/147842376-fdcb8331-e47f-4a46-9d40-0e9424aa575b.png)
 
 ## Contributors
 Here list the people who have contributed to this project. 
