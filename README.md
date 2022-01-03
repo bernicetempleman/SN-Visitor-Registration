@@ -19,8 +19,9 @@ List of features ready and TODOs for future development
 - Guests do not have user accounts
 
 To-do list:
-- determine if notifications are needed and when
-- determine if there are any checkout time requirements
+- Determine if notifications are needed and when
+- Determine if there are any checkout time requirements
+- Should new visit be auto-populated? What fields need to be filled out? 
 
 
 ## Getting Started
