@@ -1,7 +1,8 @@
 # ServiceNow-Visitor-Registration
 
 - Custom table for visitor registration
-
+- Requirement to not allow visitors previously banned by security
+- RAs will check guests in and out at computer at front entrance to dorms
 
 ## Technologies Used
 - ServiceNow
@@ -12,8 +13,14 @@
 ## Features
 
 List of features ready and TODOs for future development
+- Security are employees with user accounts, roles and additional access
+- RAs are University employees with an existing user account and roles
+- Students have user accounts but are not employees and do not have roles
+- Guests do not have user accounts
 
 To-do list:
+- determine if notifications are needed and when
+- determine if there are any checkout time requirements
 
 
 ## Getting Started
