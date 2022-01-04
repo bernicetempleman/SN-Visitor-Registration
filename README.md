@@ -65,6 +65,12 @@ To-do list:
 ### Successful Visitor Added
 ![image](https://user-images.githubusercontent.com/12488769/147842699-f212415e-4306-4947-86e4-66d1b903d978.png)
 
+### RA group and Security group notified of visitor
+![image](https://user-images.githubusercontent.com/12488769/148091539-92106eed-ade5-464e-ab93-ba5825fb848b.png)
+
+![image](https://user-images.githubusercontent.com/12488769/148091201-b2aaacf8-7332-465b-ae4f-df392edaa481.png)
+
+
 ### Visit end time needs updated before close
 ![image](https://user-images.githubusercontent.com/12488769/147842728-5866a790-f22e-44f7-add2-e9194daf8b14.png)
 
