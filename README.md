@@ -17,12 +17,13 @@ List of features ready and TODOs for future development
 - RAs are University employees with an existing user account and roles
 - Students have user accounts but are not employees and do not have roles
 - Guests do not have user accounts
+- Notify RA and Security groups when new visitor record created
 
 To-do list:
 - Determine if notifications are needed and when
 - Determine if there are any checkout time requirements
 - Should new visit be auto-populated? What fields need to be filled out? 
-
+- create a custom visitor user table (can't log in) for contact info/ auto populate visitor info when visitor task created
 
 ## Getting Started
 
