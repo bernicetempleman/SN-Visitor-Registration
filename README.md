@@ -18,12 +18,14 @@ List of features ready and TODOs for future development
 - Students have user accounts but are not employees and do not have roles
 - Guests do not have user accounts
 - Notify RA and Security groups when new visitor record created
+- Autopopulate name, phone and emergency contact name & phone if email on previous visit record
+- Autoflll assigned to and company
 
 To-do list:
 - Determine if notifications are needed and when
 - Determine if there are any checkout time requirements
 - Should new visit be auto-populated? What fields need to be filled out? 
-- create a custom visitor user table (can't log in) for contact info/ auto populate visitor info when visitor task created
+- Create a custom visitor user table (can't log in) for contact info/ auto populate visitor info when visitor task created
 
 ## Getting Started
 
