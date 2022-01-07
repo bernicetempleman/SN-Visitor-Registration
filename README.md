@@ -23,9 +23,7 @@ List of features ready and TODOs for future development
 - Visitor Registration form available in cusotm Portal pm
 
 To-do list:
-- Determine if notifications are needed and when
-- Determine if there are any checkout time requirements
-- Should new visit be auto-populated? What fields need to be filled out? 
+- Create custome widget for Visitor ticket actions
 - Create a custom visitor user table (can't log in) for contact info/ auto populate visitor info when visitor task created
 
 ## Getting Started
