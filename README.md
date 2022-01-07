@@ -28,6 +28,198 @@ To-do list:
 
 ## Getting Started
 
+### Dictionary Entry
+Company
+javascript: gs.getUser().getCompanyID();
+ 
+ Assigned to:
+ javascript: gs.getUserID();
+
+### Data Policies
+- Visitor Number Read only
+- Visitor make read only after created
+- Visitor make read only after created 
+
+### Client Script to autopopulate fields if previous visitor record exists with email
+
+```
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    alert('Checking...');
+
+    var test = g_form.getValue('u_visitoremail');
+    var ga = new GlideAjax('demoCountAJAX'); //Call Script Include
+    ga.addParam('sysparm_name', 'demoTestFunction2'); //Call the Function
+    ga.addParam('sysparm_sd', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse);
+
+    function getResponse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+
+       // alert(answer);
+       // if (data != 'false') {
+            var values = JSON.parse(answer); //turn it to JSON obj
+			//alert( values.FN + values.LN);
+            g_form.setValue('u_visitorfirstname', values.FN);
+            g_form.setValue('u_visitorlastname', values.LN);
+            g_form.setValue('u_visitorphone', values.PH);
+            g_form.setValue('u_visitoremergencycontact', values.CN);
+            g_form.setValue('u_visitoremergencycontactphone', values.CP);
+
+       // }
+    }
+}
+```
+
+
+### Script Include
+
+```
+var demoCountAJAX = Class.create();
+demoCountAJAX.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+// this function was written first to check for previous ban 
+// these can be combined into 1 function 
+    demoTestFunction: function() {
+
+        //var count = 0;
+        var securitycheck = false;
+        var sd = this.getParameter('sysparm_sd');
+        var gr = new GlideRecord('u_visitor');
+        gr.addQuery('u_visitoremail', sd);
+        //gr.orderByDesc('sys_created_on');
+        gr.query();
+        while (gr.next()) {
+            //count++;
+            if (gr.u_securityban == true) {
+                securitycheck = true;
+            }
+        }
+        return (securitycheck);
+    },
+
+// this function written second to autopopulat field based on email
+    demoTestFunction2: function() {
+        var sd = this.getParameter('sysparm_sd');
+        var gr = new GlideRecord('u_visitor');
+        gr.addQuery('u_visitoremail', sd);
+        //gr.orderBy('sys_created_on');
+        gr.query();
+        var obj = {};
+
+        if (gr.next()) {
+            obj.FN = gr.u_visitorfirstname.toString();
+            obj.LN = gr.u_visitorlastname.toString();
+            obj.PH = gr.u_visitorphone.toString();
+            obj.CN = gr.u_visitoremergencycontact.toString();
+            obj.CP = gr.u_visitoremergencycontactphone.toString();
+        } else {
+            obj.FN = '';
+            obj.LN = '';
+            obj.PH = '';
+            obj.CN = '';
+            obj.CP = '';
+        }
+
+        //value = JSON.stringify(object);
+        var json = new JSON();
+        var data = json.encode(obj); //JSON formatted string      
+        return data;
+    },
+    type: 'demoCountAJAX'
+});
+```
+
+### Client Script to check security flag
+
+```
+function onSubmit() {
+    //Type appropriate comment here, and begin script below
+    var action = g_form.getActionName();
+    //alert("the action is: " + action);
+    var visitorState = g_form.getValue('state');
+    if (action == 'sysverb_update' && g_form.getValue('u_visit_end_time') == '') {
+        if (visitorState == '3' || visitorState == '4' || visitorState == '7') {
+            //Make 'close_notes' mandatory and abort the submission
+            g_form.setMandatory('u_visit_end_time', true);
+            return false;
+        }
+    }
+
+    var test = g_form.getValue('u_visitoremail');
+    var ga = new GlideAjax('demoCountAJAX'); //Call Script Include
+    ga.addParam('sysparm_name', 'demoTestFunction'); //Call the Function
+    ga.addParam('sysparm_sd', test); //Pass the Parameter Value
+
+    // wait to prevent the form being inserted 
+    ga.getXMLWait();
+    var answer = ga.getAnswer();
+   // alert("The answer is: " + answer);
+    if ((answer == 'true') && (action == 'sysverb_insert')) {
+        alert('Record submission aborted. Visitor is not allowed on Campus per Security.');
+
+        //Make sure dirty form still works
+        g_form.submitted = false;
+
+        //Abort the submission
+        return false;
+
+    }
+}
+```
+
+### UI Actions
+Create Incident from Visitor / Button
+```
+var incident = new GlideRecord("incident");
+incident.short_description = current.short_description;
+incident.description = current.description;
+incident.assignment_group = "Security";
+incident.company = current.company;
+incident.category = "Visitor";
+incident.work_notes = "Created from Visitor: " +  current.number;
+current.work_notes = "Incident opened: " + incident.number;
+incident.setValue("parent", current.sys_id);
+var sysID = incident.insert();
+
+var mySysID = current.update();
+gs.addInfoMessage(gs.getMessage("Incident {0} created", incident.number));
+current.work_notes = "Incident opened: " + incident.number;
+action.setRedirectURL(incident);
+action.setReturnURL(current);
+current.update();
+```
+
+## Delete Visitor Record / Override Global delete button by edit name/ insert and stay
+uncheck form button
+
+### Business Rules
+- visitor_category
+Table: incident
+insert & update
+if category is visitor /  Assignment group to security
+```
+(function executeRule(current, previous /*null when async*/ ) {
+
+    var abort = false;
+    if (current.u_visit_end_time.nil()) {
+        abort = false;
+        gs.addErrorMessage(gs.getMessage("Visit end time is mandatory when closing a Visit"));
+    }
+
+    if (abort)
+        current.setAbortAction(true);
+})(current, previous);
+```
+
+- Visitor Mandatory close
+Table: visitor
+Insert & update
+if state is closed complete, closed incomplete. closed skipped/ 
 ## Usage
 
 ### Resident Advisor account example
