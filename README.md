@@ -20,6 +20,7 @@ List of features ready and TODOs for future development
 - Notify RA and Security groups when new visitor record created
 - Autopopulate name, phone and emergency contact name & phone if email on previous visit record
 - Autoflll assigned to and company
+- Visitor Registration form available in cusotm Portal pm
 
 To-do list:
 - Determine if notifications are needed and when
@@ -91,6 +92,9 @@ To-do list:
 
 ### Security has permission to ban a visitor from future visits
 ![image](https://user-images.githubusercontent.com/12488769/147842869-e8d7445f-adae-4f9c-9fee-605f5df76be6.png)
+
+## Visitor Registration in Custom Portal
+![image](https://user-images.githubusercontent.com/12488769/148584765-255338c9-4cba-495d-b084-14ca07847a1a.png)
 
 
 ## Contributors
