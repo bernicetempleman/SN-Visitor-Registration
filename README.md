@@ -94,6 +94,9 @@ To-do list:
 ## Visitor Registration in Custom Portal
 ![image](https://user-images.githubusercontent.com/12488769/148584765-255338c9-4cba-495d-b084-14ca07847a1a.png)
 
+## Custom widget to resolve incident in custom portal
+![image](https://user-images.githubusercontent.com/12488769/148606131-a90ee7ab-1569-4a0c-824a-afd07e5ab1fe.png)
+
 
 ## Contributors
 Here list the people who have contributed to this project. 
