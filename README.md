@@ -1,5 +1,6 @@
 # ServiceNow-Visitor-Registration
 
+
 - Custom table for visitor registration
 - Requirement to not allow visitors previously banned by security
 - RAs will check guests in and out at computer at front entrance to dorms
